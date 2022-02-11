@@ -1,7 +1,35 @@
-.zoom50 {
-  -moz-transform: scale(0.5);
-  -webkit-transform: scale(0.5);
-  -o-transform: scale(0.5);
-  -ms-transform: scale(0.5);
-  transform: scale(0.5);
+body *,
+html * {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+body {
+  overflow: hidden;
+}
+
+.full {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: block;
+}
+
+.zoom {
+  animation: scale 40s linear infinite;
+}
+  
+@keyframes scale {
+  50% {
+    -webkit-transform:scale(1.2);
+    -moz-transform:scale(1.2);
+    -ms-transform:scale(1.2);
+    -o-transform:scale(1.2);
+    transform:scale(1.2);
+  }
 }
